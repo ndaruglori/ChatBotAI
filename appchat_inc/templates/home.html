@@ -1,0 +1,843 @@
+{% extends "base.html" %}
+{% include "popup_template.html" %}
+{% load static %}
+{% block title %} Buddy {% endblock %}
+{% block content %}
+<style>
+  .bg-light-info{
+    background-color: #5D87FF !important;
+    color: #fff !important;
+  }
+  .form-control{
+    border-color: #aaa;
+  }
+  /* .custom-size {
+    width: 600px;
+    height: 660px;
+  } */
+
+  .no-scroll {
+      overflow: hidden; /* Hide the overflow */
+  }
+
+  .custom-size {
+    width: 600px;  
+    height: auto; /* Let the height adjust automatically */
+  }
+
+  @media (max-width: 768px) {
+  .custom-size {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Allow height to adjust automatically */
+    }
+  }
+
+  .custom-title-size {
+    font-size: 24px;
+  }
+
+  .custom-content{
+    width: 400;
+    height: auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+  } 
+
+  .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6 {
+    margin-bottom: 20px;
+  }
+
+  .pad-10{
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  .bot_name{
+    margin: 0rem 0.5rem;
+    line-height: 35px;
+    margin-left: 0px;
+  }
+  .text_justify{
+    text-align: justify;
+  }
+
+  @keyframes dot-flashing {
+    0% { background-color: #7C8FAC; }
+    70% { background-color: #DFE5EF; }
+    100% { background-color: #DFE5EF; }
+  }
+
+  .swal-premi-calculation {
+    height: 800px;
+    width: 400px;
+    font-size: 0.875rem;
+  }
+
+  #premi_calcu_form{
+    width: 320px; 
+    height: 800px;
+  }
+
+  .form-label-swal{
+    margin: 10px 0px 10px 0px;
+    font-family:  sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #2A3547;
+  }
+
+  .radioJenisAsuransi label{
+    font-size: 0.875rem;
+  }
+
+  .SizeSwal{
+    width: 600;
+    height: auto;
+    font-size: 0.790rem;
+  }
+
+  .checkPerluasanJaminan
+  label{
+    font-size: 0.800rem;
+  } 
+
+  .custom-swal-container {
+  background-color: #ffd12a; /* background color */
+  border-radius: 10px; /* simulated oval */
+  padding: 5px 5px; /* px-6, py-10 */
+  text-align: center; /* text center */
+  width: 300px; /* optional: adjust based on your requirement */
+  /* other styles */
+  }
+
+  /* .bg-oval--bottom {
+    background-size: 556px 556px;
+    background-position: center 30px;
+  }
+
+.bg-oval {
+    background-image: url(/static/assets/images/backgrounds/oval-dark.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 80% 200%;
+  } */
+
+  .bg-oval--bottom {
+    /* background-position: center; */
+    background-size: 556px 556px;
+    background-position: center 30px;
+  }
+
+  .bg-oval {
+    background-size: cover; 
+    /* background-position: center;  */
+    background-image: url(/static/assets/images/backgrounds/oval-dark.svg);
+    background-repeat: no-repeat;
+    background-position: 100% -600%;
+  }
+
+
+</style>
+
+<div class="row claim-content" >
+    <div class="col-lg-12 d-flex align-items-strech">
+        <div class="card w-100">
+          <div class="card-body pad-10">
+            
+            <div id="chat_content" class="mb-3 col-lg-12" style="height : 70vh; overflow: scroll;">
+                {% comment %} 
+                <div class="align-items-start mb-7 justify-content-start">
+                    <div>
+                      <div class="">
+                        <img src="{% static 'assets/images/profile/bot.jpg' %}" alt="bot" width="35" height="35" class="rounded-circle"> <span class="bot_name"> Buddy <span>
+                      </div>
+                      <div class="p-2 bg-light rounded-1 d-inline-block text-dark fs-3 text_justify">
+                        Hello, I'm Buddy, an AI-Powered Chatbot, powered by GPT-3.5 technology. Although I'm a work in progress and not yet perfect, this use case offers you a sneak peek into the ongoing journey to harness AI's potential across diverse applications by The Janus Lab. With me, podcasts evolve from passive listening experiences to active learning opportunities. Plus, I'm designed to understand and respond to prompts in languages different from those used in the podcast, effectively breaking down language barriers.
+                      </div>
+                    </div>
+                </div> {% endcomment %}
+
+                <div class="align-items-start mb-7 justify-content-start">
+                    <div>
+                      <div class="">
+                        <img src="{% static 'assets/images/profile/bot.jpg' %}" alt="bot" width="35" height="35" class="rounded-circle"> <span class="bot_name">Buddy<span>
+                      </div>
+                      <div class="p-2 bg-light rounded-1 d-inline-block text-dark fs-3 text_justify"> 
+                        <b>Halo,</b>
+                        <br>
+                        <br>Saya adalah chatbot yang ditenagai oleh kecerdasan buatan (AI), siap membantu dan menyediakan informasi terkait General Insurance khususnya Asuransi Kendaraan Bermotor.
+                        <br>
+                        <br>Berikut adalah tiga pertanyaan yang mungkin dapat Anda ajukan:
+                        <br>
+                        <br>1. Bagaimana cara membeli polis asuransi kendaraan bermotor?
+                        <br>2. Sebutkan jaminan utama dalam asuransi kendaraan bermotor?
+                        <br>3. Bagaimana proses pengajuan klaim?<br>
+                        <br>
+                        <br>Silakan ajukan pertanyaan Anda terkait Asuransi Kendaraan Bermotor.<br>
+                      </div>
+                    </div>
+                </div>
+
+                <div id="div_chat">
+                </div>
+
+                {% comment %} 
+                <div class="hstack gap-3 align-items-start mb-7 justify-content-end">
+                    <div class="text-end">
+                      <div class="p-2 bg-light-info text-dark rounded-1 d-inline-block fs-3"> Hi, saya ingin bertanya </div>
+                    </div>
+                </div> {% endcomment %}
+
+                {% comment %} 
+                <div class="align-items-start mb-7 justify-content-end">
+                    <div class="text-end">
+                      <div class="d-inline-block">
+                        <div class="">
+                          <span class="bot_name"> Username <span>
+                        </div>
+                        <div class="p-2 bg-light-info text-dark rounded-1 fs-3">Hi, tanya dong</div>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+
+                <div class="align-items-start mb-7 justify-content-start" id="bot_loading" style="visibility:hidden;" >
+                    <div>
+                      <div class="">
+                        <img src="{% static 'assets/images/profile/bot.jpg' %}" alt="bot" width="35" height="35" class="rounded-circle"> 
+                        <span class="bot_name">Buddy<span>
+                      </div>
+                      <div class="p-2 bg-light rounded-1 d-inline-block text-dark fs-3 text_justify"
+                        style="width:100px;">
+                        <center>
+                          <div class="dot-flashing"></div>
+                        </center>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-12" style="">
+                <form id="ask_form">
+                    {% csrf_token %}
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="user_question" aria-describedby="you can ask about insurance" autocomplete='off' placeholder="Ask me anything about insurance!">
+                      <button class="btn btn-primary" type="submit" id="submit_question">
+                        <img src="{% static 'assets/images/profile/send.png' %}" alt="send" 
+                        border="0" width="25" height="25" style="filter:invert(1);"/>
+                      </button>
+                    </div>
+                </form>
+            </div>
+
+          </div>
+        </div>
+    </div>    
+ </div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+
+  var full_chat_history = [];
+  var full_username = '';
+  var auth = "{{request.user.is_authenticated}}"
+  console.log(auth)
+  var user_location = '';
+
+  $(function() {
+    if(auth){
+      full_username = "{{request.user.username}}"
+      console.log(full_username)
+    }else{
+      full_username = getUrlParameter('username');
+    }
+    
+    if(full_username == '' || full_username == 'false' || !full_username){
+      ask_username();
+    }else{
+      var delayInMilliseconds = 2000; //1000 = 1 second
+
+      setTimeout(function() {
+        scrollChatToBottom();
+      }, delayInMilliseconds);
+    }
+
+    get_user_location();
+  });
+
+  function scrollChatToBottom(){
+		$('#chat_content').animate({
+             scrollTop: $('#chat_content')[0].scrollHeight
+         },
+         2000);
+         return false;
+	}
+
+  $.ajaxSetup({
+    //headers: { "X-CSRFToken": '{{csrf_token}}' }
+  });
+
+  $("#ask_form").submit(function (event) {
+    submit_question();
+    event.preventDefault();
+  });
+
+  $('#user_question').keypress(function (e) {
+    if (e.which == 13) {
+      submit_question();
+      return false;   
+    }
+  });
+
+  function nl2br (str, is_xhtml) {
+    if (typeof str === 'undefined' || str === null) {
+        return '';
+    }
+    var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+  }
+
+  function submit_question(){
+    var question = $('#user_question').val();
+    var chat_chunk_size = $('#chat_chunk_size').val();
+    
+    console.log(full_chat_history);
+
+    var chat_history = [];
+    chat_history = full_chat_history;
+
+    var email = getUrlParameter('email');
+    var username = full_username;
+    var location = user_location;
+
+
+    var fd = new FormData();
+    fd.append('csrfmiddlewaretoken','{{ csrf_token }}')    
+    fd.append('question', question);
+    for (var i = 0; i<chat_history.length; i++) {
+      fd.append('chat_history[]', chat_history[i]);
+    }
+    if (email){
+      fd.append('email',email)
+    }
+    if (username){
+      fd.append('username',username)
+    }
+    if(location){
+      fd.append('location',location)
+    }
+    if(chat_chunk_size){
+      fd.append('chat_chunk_size',chat_chunk_size)
+    }
+
+    $.ajax({
+      url: 'chat_thebot',
+      data: fd,
+      type: 'POST',
+      processData: false,
+      contentType: false,
+      beforeSend: function () {
+        $("#bot_loading").css("visibility", "visible");
+        $('#user_question').prop('disabled', true);
+        $('#submit_question').prop('disabled', true);
+        
+        scrollChatToBottom();
+
+        var html = `
+        <div class="align-items-start mb-7 justify-content-end">
+            <div class="text-end">
+              <div class="d-inline-block">
+                <div class="">
+                  <span class="bot_name">`+ username +`<span>
+                </div>
+                <div class="p-2 bg-light-info text-dark rounded-1 fs-3 text_justify">`+question+`</div>
+              </div>
+            </div>
+        </div>
+        `;
+        $('#div_chat').append(html);
+        $("#user_question").val("");
+        scrollChatToBottom();
+      },
+      success: function (result) {
+        $("#bot_loading").css("visibility", "hidden");
+        $('#user_question').prop('disabled', false);
+        $('#submit_question').prop('disabled', false);
+        $('#user_question').focus();
+        console.log('result');
+        console.log(result.vehicle);
+        console.log('plat');
+        console.log(result.plat);
+        var answer = result.answer;
+        var message = result.message;
+        var vehicle_make = result.vehicle;
+        var plat = result.plat;
+        var status = result.status;
+        var question_post = result.question;
+        var chat_chunk_size = result.chat_chunk_size;
+        var chat_history = result.chat_history;
+        var vehicle = result.vehicle;
+      
+        if (status == true) {
+          var html = `
+          <div class="align-items-start mb-7 justify-content-start">
+              <div>
+                <div class="">
+                  <img src="{% static 'assets/images/profile/bot.jpg' %}" alt="bot" width="35" height="35" class="rounded-circle"> <span class="bot_name">Buddy<span>
+                </div>
+                <div class="p-2 bg-light rounded-1 d-inline-block text-dark fs-3 text_justify"> `+ nl2br(answer) +` </div>
+              </div>
+          </div>
+          `;
+          $('#div_chat').append(html);
+          scrollChatToBottom();
+          console.log('Masuk From');
+          if (message == 'PopUp'){
+            console.log('Masuk PopUp');
+            console.log(answer);
+            if (answer == 'Simulasi harga premi kendaraan bermotor')
+            {
+              console.log('Masuk Premi Calculation.');
+              PremiCalcuation( question_post, chat_chunk_size, chat_history, vehicle_make, plat);
+            }
+            else if(answer == 'Claim')
+            {
+              CallClaim();
+            }
+            // else if(answer == 'Simulasi harga premi kebakaran')
+            // {
+            //   PremiCalcuationFire();
+            // }
+              
+          }
+
+          full_chat_history.push(question);
+          full_chat_history.push(answer);
+
+        } else {
+          alert('status = false')
+        }
+      },
+      error: function (e) {
+        $("#bot_loading").css("visibility", "hidden");
+        $('#user_question').prop('disabled', false);
+        $('#submit_question').prop('disabled', false);
+        alert('chat the bot error');
+      }
+    });
+  }
+
+  function summarize(){
+    $.ajax({
+        url: '/summarize',
+        type: 'GET',
+        processData: false,
+        contentType: false,
+        beforeSend: function () {
+          $.LoadingOverlay("show");
+        },
+        success: function (result) {
+          $.LoadingOverlay("hide");
+          if (result.status == true) {
+            $('#modal_body').html(result.desc);
+          } else {
+            $('#modal_body').html('no data');
+          }
+        },
+        error: function (e) {
+          $.LoadingOverlay("hide");
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Get summary error',
+          });
+        }
+    });
+  }
+
+  var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+  
+      for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+  
+          if (sParameterName[0] === sParam) {
+              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+          }
+      }
+      return false;
+  };
+
+  async function get_user_location(){
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 10000,
+    };
+
+    const successCallback = (position) => {
+      console.log(position);
+      user_location = position.coords.latitude + ',' + position.coords.longitude;
+      console.log(user_location)
+    };
+    
+    const errorCallback = (error) => {
+      console.log(error);
+    };
+    
+    navigator.geolocation.getCurrentPosition(
+      successCallback,
+      errorCallback,
+      options
+    );
+  }
+
+  function ask_username(){
+    Swal.fire({
+      title: ' ',
+      //text: `Please submit your name to get started`,
+      html:`
+      <p style="text-align:center; margin-bottom:0px;">Hi, I'm Buddy, your AI chatbot buddy, fueled by the awesome GPT-3.5 tech.<br> I'm a bit of a work in progress, but here to give you a taste of<br>The Janus Lab's AI adventure! 
+      <br><br>
+      Just a friendly FYI - Your session is recorded so I can learn and improve
+      <br><br>
+      <b>Please submit your name to get started</b></p>`,
+      input: 'text',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: false,
+      confirmButtonColor: '#5D87FF',
+      confirmButtonText: 'Submit',
+      allowOutsideClick: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if(result.value == ''){
+          ask_username();
+        }else{
+          full_username = result.value;
+          scrollChatToBottom();
+        }
+      }
+    })
+  }
+
+  function PremiCalcuation( question, chat_chunk_size, chat_history, vehicle, plat) {
+   // var dropdown_options = [{'value': item[0], 'text': item[1]} for item in vehicle]
+    OptionVehicleMake = '';
+    OptionPlat = '';
+    // for (item in vehicle)
+    //   htmlOption = htmlOption + ' <option value="' + item + '">' + item + '</option>  '
+
+    vehicleLength = vehicle.length
+    platLength = plat.length
+    console.log('vehicle html');
+    for (var i = 0; i < vehicleLength; i++) {
+        console.log(vehicle[i]);
+        OptionVehicleMake = OptionVehicleMake + ' <option value="' + vehicle[i] + '">' + vehicle[i] + '</option>  '
+    }
+    console.log('plat html');
+    for (var j = 0; j < platLength; j++) {
+        console.log(plat[j]);
+        OptionPlat = OptionPlat + ' <option value="' + plat[j] + '">' + plat[j] + '</option>  '
+    } 
+
+    Swal.fire({
+      title: 'Simulasi Harga',
+      html:
+        '<form id="premi_calcu_form" >'+
+          '{% csrf_token %}'+
+          '<p style="text-align:center; font-size:medium;">Silahkan lengkapi informasi di bawah ini untuk mendapatkan perkiraan harga premi asuransi kendaraan bermotor anda.' +
+          '<div style="text-align:left; class="premi_calculation">'+
+            '<label for="merekKendaraan" class="form-label-swal">Merek Kendaraan</label>' +
+            '<select type="text" id="merekKendaraan" class="form-select">' +
+            '<option value="0">Merek Kendaraan</option>  ' +
+            OptionVehicleMake +
+            '</select>'+    
+            '<label for="kategoriKendaraan" class="form-label-swal">Kategori Kendaraan</label>' +
+            '<select type="text" id="kategoriKendaraan" class="form-select">' +
+            '<option value="0">Kategori Kendaraan</option>  ' +
+            '</select>'+
+            '<label for="modelKendaraan" class="form-label-swal">Model Kendaraan</label>' +
+            '<select type="text" id="modelKendaraan" class="form-select">' +
+            '<option value="0">Model Kendaraan</option>  ' +
+            '</select>'+
+            '<label for="tahunKendaraan" class="form-label-swal">Tahun Kendaraan</label>' +
+            '<input type="text" class="form-control" id="tahunKendaraan" type="number" placeholder="Tahun Kendaraan">' +
+            '<label for="platNo" class="form-label-swal">Plat No</label>' +
+            '<select type="text" id="platNo" class="form-select">' +
+            '<option value="0">Plat No</option>  ' +
+            OptionPlat +
+            '</select>'+
+            '<label for="hargaKendaraan" class="form-label-swal">Harga Kendaraan</label>' +
+            '<input type="text" class="form-control" id="hargaKendaraan" type="number" placeholder="Harga Kendaraan">'+            
+            '<label for="jenisAsuransi" class="form-label-swal">Jenis Asuransi</label>' +
+            '<div class="radioJenisAsuransi">'+
+              '<div class="form-check form-check-inline">'+
+                '<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioTlo" value="TLO" checked />'+
+                '<label class="form-check-label" for="inlineRadioTlo">TLO</label>'+
+              '</div>'+            
+              '<div class="form-check form-check-inline">'+
+                '<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioCompre" value="ALL" />'+
+                '<label class="form-check-label" for="inlineRadioCompre">Comprehensive</label>'+
+              '</div>'+
+            '</div>'+
+            '<label for="perluasanJaminan" class="form-label-swal">Perluasan Jaminan</label>' +
+            '<div class="checkPerluasanJaminan">'+              
+              '<div class="form-check">'+
+                '<input class="form-check-input" type="checkbox" id="perluasan1" name="perluasan" value="PERIL002">'+
+                '<label class="form-check-label for="perluasan1">TJH PIHAK III</label>'+
+              '</div>'+
+              '<div class="form-check">'+
+                '<input class="form-check-input" type="checkbox" id="perluasan2" name="perluasan" value="PERIL003">'+
+                '<label class="form-check-label" for="perluasan2">KERUSUHAN, PEMOGOKAN DAN HURU-HARA</label>'+
+              '</div>'+
+              '<div class="form-check">'+
+                '<input class="form-check-input" type="checkbox" id="perluasan3" name="perluasan" value="PERIL004">'+
+                '<label class="form-check-label" for="perluasan3">BAJINR, ANGIN TOPAN DAN BADAI</label>'+
+              '</div>'+
+              '<div class="form-check">'+
+                '<input class="form-check-input" type="checkbox" id="perluasan4" name="perluasan" value="PERIL005">'+
+                '<label class="form-check-label" for="perluasan4">GEMPA BUMI, LETUSAN GUNUNG BERAPI DAN TSUNAMI</label>'+
+              '</div>'+
+              '<div class="form-check">'+
+                '<input class="form-check-input" type="checkbox" id="perluasan5" name="perluasan" value="PERIL006">'+
+                '<label class="form-check-label" for="perluasan5">BENGKEL RESMI</label>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</form>'
+          ,
+      focusConfirm: false,
+      showCancelButton: true,
+      confirmButtonText: 'Hitung',
+      position: 'center', customClass: 'swal-premi-calculation',      
+    }).then((result) => {
+        if (result.isConfirmed) {
+          // Get the user's input
+          const merekKendaraan    = $('#merekKendaraan').val();
+          const kategoriKendaraan = $('#kategoriKendaraan').val();
+          const modelKendaraan    = $('#modelKendaraan').val();
+          const tahunKendaraan    = $('#tahunKendaraan').val();
+          const platNo            = $('#platNo').val();
+          const hargaKendaraan    = $('#hargaKendaraan').val();
+          const jenisAsuransi     = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
+          const perluasanJaminan  = Array.from(document.querySelectorAll('input[name="perluasan"]:checked')).map(checkbox => checkbox.value);
+
+          // Make an AJAX request to your Django view
+          $.ajax({
+            type: 'POST',
+            url: 'permi_calculation', // Replace with your actual endpoint URL
+            data: {
+              merek_kendaraan: merekKendaraan,
+              kategori_kendaraan: kategoriKendaraan,
+              model_kendaraan: modelKendaraan,
+              tahun_kendaraan: tahunKendaraan,
+              plat_no: platNo,
+              harga_kendaraan: hargaKendaraan,
+              jenis_asuransi: jenisAsuransi,
+              perluasan_jaminan: perluasanJaminan,
+              question : question,
+              chat_chunk_size: chat_chunk_size,
+              chat_history: chat_history,
+              csrsubmittoken : '{{ csrf_token }}'
+            },
+            headers: {
+            'X-CSRFToken': getCookie('csrftoken'), // Mengambil token CSRF dari cookie
+          },         
+          beforeSend: function () {
+            $("#bot_loading").css("visibility", "visible");
+            $('#user_question').prop('disabled', true);
+            $('#submit_question').prop('disabled', true);
+            
+            scrollChatToBottom();       
+          },
+          success: function (response) {
+
+          $("#bot_loading").css("visibility", "hidden");
+          $('#user_question').prop('disabled', false);
+          $('#submit_question').prop('disabled', false);
+          $('#user_question').focus();
+      
+              
+            var html = `
+            <div class="align-items-start mb-7 justify-content-start">
+                <div>
+                  <div class="">
+                    <img src="{% static 'assets/images/profile/bot.jpg' %}" alt="bot" width="35" height="35" class="rounded-circle"> <span class="bot_name">Buddy<span>
+                  </div>
+                  <div class="p-2 bg-light rounded-1 d-inline-block text-dark fs-3 text_justify"> `+ nl2br(response.answer) +` </div>
+                </div>
+            </div>
+            `;
+            $('#div_chat').append(html);
+            scrollChatToBottom();
+              
+            },
+            error: function () {
+              // Handle errors (if any)
+              //console.log('Error sending data.');
+            },
+          });
+        }
+      });
+
+      $('#merekKendaraan').change(function() 
+      {
+        var merekKendaraan = $(this).val();
+        console.log('Change Merek Kendaraan');
+        console.log(merekKendaraan);
+        // Lakukan permintaan Ajax untuk mengambil data terkait dropdown kedua
+        $.ajax({
+            url: 'get_dropdown_category',
+            data: {
+                'merekKendaraan': merekKendaraan
+            },
+            dataType: 'json',
+            success: function(response) {
+                var kategoriKendaraanData = response.vehicle_category;
+                var kategoriKendaraan = $('#kategoriKendaraan');
+                console.log('Change Kategori Kendaraan');
+                console.log(kategoriKendaraanData);
+                console.log(kategoriKendaraan);
+                kategoriKendaraan.empty();    
+                kategoriKendaraan.append('<option value="">Kategori Kendaraan</option>');
+                kategoriKendaraanData.forEach(function(item) {
+                  kategoriKendaraan.append('<option value="' + item.vehicle_category + '">' + item.vehicle_category + '</option>');
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+          });
+      });
+
+      $('#kategoriKendaraan').change(function() 
+      {
+        var kategoriKendaraan = $(this).val();
+        console.log('Change Kategori Kendaraan');
+        console.log(kategoriKendaraan);
+        // Lakukan permintaan Ajax untuk mengambil data terkait dropdown kedua
+        $.ajax({
+            url: 'get_dropdown_model',
+            data: {
+                'kategoriKendaraan': kategoriKendaraan
+            },
+            dataType: 'json',
+            success: function(response) {
+                var modelKendaraanData = response.vehicle_model;
+                var modelKendaraan = $('#modelKendaraan');
+                console.log('Change Model Kendaraan');
+                console.log(modelKendaraanData);
+                console.log(modelKendaraan);
+                modelKendaraan.empty();    
+                modelKendaraan.append('<option value="">Model Kendaraan</option>');
+                modelKendaraanData.forEach(function(item) {
+                  modelKendaraan.append('<option value="' + item.vehicle_model + '">' + item.vehicle_model + '</option>');
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+          });
+      });
+    }  
+
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === name + '=') {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  function CallClaim() {
+    Swal.fire({
+      //title: 'Pengajuan Klaim Asuransi',
+      //text: `Please submit your name to get started`,
+      html:`
+      <div class="SizeSwal no-scroll">
+        <h4>Pengajuan Klaim Asuransi</h4>
+        &nbsp;
+        <p style="text-align:center; max-width=500px ">Gunakan Raksa Online App untuk melakukan proses claim yang mudah tanpa harus kesulitan mendatangi kantor cabang terdekat. Cukup dengan buka smartphone, install aplikasi Raksa Online dan kamu siap melakukan proses klaim secara online.</p>
+        <h6>Segera Unduh Raksa Online App</h6>
+        <div class="row custom-content" >
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex justify-content-center align-items-center" > 
+            <div class="h-100 align-items-start custom-swal-container bg-oval bg-oval--bottom py-10 px-2 text-center rounded match">
+                <div class="col-12 text-left mb-6">
+                  <h6 class="point__title ">Android</h6>
+                </div>
+                <div class="col-xs-12 mb-0"><img alt="" src="https://www.araksa.com/mks/afif/rol/assets/playstore_.png" width="70" height="70" ></div>
+                &nbsp;
+                <div class="col-xs-12 align-self-end">
+                  <p class="mb-0 text-left SizeSwal-paraf">Bagi Anda pengguna Android nikmati kemudahan klaim dengan aplikasi Raksa Online. Segera untuk aplikasi Raksa Online di Google Play Store. Klik <a href="https://play.google.com/store/apps/details?id=com.seatechmobile.raksaclaim2">di sini</a> untuk mengunduh aplikasi Raksa Online di Play Store.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
+              <div class="h-100 align-items-start custom-swal-container bg-oval bg-oval--bottom py-10 px-2 text-center rounded match">
+                <div class="col-xs-12 text-left mb-6">
+                  <h6 class="point__title">iOS</h6>
+                </div>
+                <div class="col-xs-12 mb-0"><img alt="" src="https://www.araksa.com/mks/afif/rol/assets/app-store_1.png" width="70" height="70"></div>
+                &nbsp;
+                <div class="col-xs-12 align-self-end font-size">
+                  <p class="mb-0 text-left SizeSwal-paraf">Bagi Anda pengguna iOS nikmati kemudahan klaim dengan aplikasi Raksa Online. Segera untuk aplikasi Raksa Online di App Store Klik <a href="https://apps.apple.com/id/app/raksa-online/id1440464432">di sini</a> untuk mengunduh aplikasi Raksa Online di App Store. </p>
+                  &nbsp;
+                </div>
+              </div>
+          </div>
+        </div>
+        &nbsp;
+        &nbsp;
+        <p class="text-align:center; SizeSwal">Kunjungi halaman <a href="https://www.raksaonline.com/raksa-online-app">https://www.raksaonline.com/raksa-online-app</a> untuk informasi lebih lengkap. </p>
+        </div>
+      `,
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      customClass: {
+                    popup: 'custom-size',
+                    title: 'custom-title-size',
+                    },
+                    cancelButtonText: "Tutup",
+                    showCancelButton: true,
+                    showCloseButton: true,
+                    showConfirmButton: false
+    })
+  }
+
+  // function PremiCalcuationFire() {
+  //   Swal.fire({
+  //     title: 'Premi Calcuation Fire',
+  //     //text: `Please submit your name to get started`,
+  //     input: text,
+  //     inputAttributes: {
+  //       autocapitalize: 'off'
+  //     },
+  //     showCancelButton: false,
+  //     confirmButtonColor: '#5D87FF',
+  //     allowOutsideClick: false,
+  //   })
+  // }
+
+   
+
+</script>
+
+{% endblock %}
+
+
+
+
+

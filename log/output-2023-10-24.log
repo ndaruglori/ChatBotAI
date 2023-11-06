@@ -1,0 +1,101 @@
+2023-10-24 16:59:49.460 SE Asia Standard Time | Q: hitung premi
+2023-10-24 16:59:49.460 SE Asia Standard Time | A: Untuk menghitung premi, diperlukan beberapa parameter seperti yang disebutkan sebelumnya. Namun, tanpa informasi lebih lanjut tentang tipe kendaraan, tahun kendaraan, plat nomor, kode pos, dan harga kendaraan, saya tidak dapat memberikan perhitungan premi yang akurat. Mohon berikan informasi lebih spesifik agar saya bisa membantu Anda dengan perhitungan premi yang tepat.
+2023-10-24 16:59:49.460 SE Asia Standard Time | Tokens Used: 259
+	Prompt Tokens: 159
+	Completion Tokens: 100
+Successful Requests: 1
+Total Cost (USD): $0.0004385
+2023-10-24 16:59:49.460 SE Asia Standard Time | D: [{"page_content": "informasi berikut adalah bagimana melakukan perhitungan premi.\nuntuk melakukan simulasi perhitungan premi diperlukan beberapa parameter yang harus di isi yaitu :\n1. Tipe Kendaraan (TRUCK,MINIBUS,SEDAN,BUS)\n2. Tahun Kendaraan\n3. Plat No\n4. Kode Post\n5. Harga Kendaraan\n\njika info tidak berkaitan dengan di atas harap di jawab dengan noinfo", "metadata": {"title": "Hitung Premi - 1000"}}]
+2023-10-24 17:01:01.367 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:01:01.367 SE Asia Standard Time | A: Untuk menghitung premi, diperlukan beberapa parameter seperti tipe kendaraan, tahun kendaraan, plat nomor, kode pos, dan harga kendaraan. Dengan informasi tersebut, kami dapat memberikan simulasi perhitungan premi yang sesuai. Apakah Anda memiliki informasi tersebut?
+2023-10-24 17:01:01.379 SE Asia Standard Time | Tokens Used: 227
+	Prompt Tokens: 159
+	Completion Tokens: 68
+Successful Requests: 1
+Total Cost (USD): $0.00037450000000000005
+2023-10-24 17:01:01.385 SE Asia Standard Time | D: [{"page_content": "informasi berikut adalah bagimana melakukan perhitungan premi.\nuntuk melakukan simulasi perhitungan premi diperlukan beberapa parameter yang harus di isi yaitu :\n1. Tipe Kendaraan (TRUCK,MINIBUS,SEDAN,BUS)\n2. Tahun Kendaraan\n3. Plat No\n4. Kode Post\n5. Harga Kendaraan\n\njika info tidak berkaitan dengan di atas harap di jawab dengan noinfo", "metadata": {"title": "Hitung Premi - 1000"}}]
+2023-10-24 17:13:37.121 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:13:37.122 SE Asia Standard Time | A: Untuk melakukan perhitungan premi, Anda perlu mengisi beberapa parameter seperti tipe kendaraan (TRUCK, MINIBUS, SEDAN, BUS), tahun kendaraan, plat nomor, kode pos, dan harga kendaraan. Dengan mengisi informasi tersebut, Anda dapat melakukan simulasi perhitungan premi.
+2023-10-24 17:13:37.124 SE Asia Standard Time | Tokens Used: 264
+	Prompt Tokens: 190
+	Completion Tokens: 74
+Successful Requests: 2
+Total Cost (USD): $0.000433
+2023-10-24 17:13:37.128 SE Asia Standard Time | D: [{"page_content": "informasi berikut adalah bagimana melakukan perhitungan premi.\nuntuk melakukan simulasi perhitungan premi diperlukan beberapa parameter yang harus di isi yaitu :\n1. Tipe Kendaraan (TRUCK,MINIBUS,SEDAN,BUS)\n2. Tahun Kendaraan\n3. Plat No\n4. Kode Post\n5. Harga Kendaraan\n\njika info tidak berkaitan dengan di atas harap di jawab dengan noinfo", "metadata": {"title": "Hitung Premi - 1000"}}]
+2023-10-24 17:17:28.404 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:17:28.409 SE Asia Standard Time | A: Untuk melakukan perhitungan premi, Anda perlu mengisi beberapa parameter seperti tipe kendaraan, tahun kendaraan, plat nomor, kode pos, dan harga kendaraan. Dengan informasi ini, Anda dapat melakukan simulasi perhitungan premi yang sesuai.
+2023-10-24 17:17:28.409 SE Asia Standard Time | Tokens Used: 252
+	Prompt Tokens: 190
+	Completion Tokens: 62
+Successful Requests: 2
+Total Cost (USD): $0.00040899999999999997
+2023-10-24 17:17:28.409 SE Asia Standard Time | D: [{"page_content": "informasi berikut adalah bagimana melakukan perhitungan premi.\nuntuk melakukan simulasi perhitungan premi diperlukan beberapa parameter yang harus di isi yaitu :\n1. Tipe Kendaraan (TRUCK,MINIBUS,SEDAN,BUS)\n2. Tahun Kendaraan\n3. Plat No\n4. Kode Post\n5. Harga Kendaraan\n\njika info tidak berkaitan dengan di atas harap di jawab dengan noinfo", "metadata": {"title": "Hitung Premi - 1000"}}]
+2023-10-24 17:17:35.769 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:17:35.769 SE Asia Standard Time | A: Untuk menghitung premi asuransi mobil, Anda perlu memberikan informasi berikut:
+1. Harga mobil
+2. Jenis asuransinya (Comprehensive atau Total Loss Only)
+3. Merk atau brand mobil
+4. Tahun pembuatan mobil
+5. Plat Mobil
+
+Dengan informasi tersebut, tim marketing asuransi akan melakukan perhitungan premi secara cepat. Anda dapat menghubungi perusahaan asuransi melalui situs web atau chatbot mereka untuk mengajukan permintaan perhitungan premi.
+2023-10-24 17:17:35.779 SE Asia Standard Time | Tokens Used: 1052
+	Prompt Tokens: 931
+	Completion Tokens: 121
+Successful Requests: 1
+Total Cost (USD): $0.0016385000000000002
+2023-10-24 17:17:35.782 SE Asia Standard Time | D: [{"page_content": "Membeli asuransi mobil bisa lebih cepat dan mudah. Calon pembeli polis tidak perlu repot datang ke kantor Asuransi tapi bisa melalui website atau chatbot. Caranya: gunakan gadget /notebook untuk membuka situs perusahaan asuransi kami atau chat tulis beli asuransi dan lengkapi data pribadi serta data produk yang akan dipilih. Kemudian tunggu waktu 1x24 jam, dan setelahnya tim marketing Asuransi akan langsung menghubungi calon pembeli polis.\n\nSebelum membeli asuransi mobil, calon pembeli polis juga dapat mengetahui perhitungan premi secara cepat. Calon pembeli polis akan diminta untuk memberikan informasi yang terdiri dari\n1. Harga mobil\n2. Jenis asuransinya\n3. Merk atau brand mobil\n4. Tahun pembuatan mobil\n5. Plat Mobil", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "Beberapa hal yang harus dilakukan untuk mengajukan klaim asuransi adalah lapor, isi formulir kejadian, survei, SPK Terbit lalu terakhir bawa mobil anda ke bengkel. Laporkan kejadian maksimal 5 x 24 jam baik secara lisan atau tertulis. Laporan bisa kamu sampaikan dengan cara datang ke kantor asuransi terdekat atau melalui Hotline chat 24 jam. Selanjutnya isi formulir kejadian. Formulir kejadian berisi penjelasan dan kronologi atas kejadian yang kamu alami dan akan menjadi bahan acuan bagi surveyor kami dalam melakukan pengecekan. Pastikan laporan yang kamu sampaikan sesuai dengan fakta yang terjadi di lapangan ya. Selanjutnya Survei akan dilakukan sebagai bentuk konfirmasi laporan yang sudah kamu sampaikan, sehingga muncul kesesuaian kejadian.  Saat survei ini juga ditentukan besaran OR (Own Risk) yang harus kamu bayarkan saat perbaikan dilakukan di bengkel. Setelah survey maka SPK akan terbit. SPK yang kamu tunggu sebagai bekal untuk melakukan perbaikan mobil, bisa langsung terbit", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "Ada 2 macam jaminan dalam asuransi kendaraan bermotor yaitu jaminan utama dan jaminan perluasan.\n\nAda dua pilihan jaminan utama dalam asuransi kendaraan bermotor, meliputi Comprehensive dan Total Loss Only (TLO). Resiko yang dijamin pada penutupan Comprehensive, yaitu kerusakan yang diakibatkan oleh adanya benturan, tabrakan, terbalik, tergelincir, perbuatan jahat, pencurian, dan kebakaran, baik untuk kerugian sebagian maupun kerugian total, selama tidak disebabkan oleh pengecualian pada polis. Risiko yang dijamin pada penutupan Total Loss Only (TLO), yaitu kerusakan atau kerugin karena suatu peristiwa yang biaya perbaikan, penggantian atau pemulihan ke keadaan semula sesaat sebelum terjadinya kerusakan atau kerugian \u2265 75% dari harga sebenarnya. TLO juga menjamin kerugian apabila kendaraan hilang atau dicuri.", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "terbit. SPK yang kamu tunggu sebagai bekal untuk melakukan perbaikan mobil, bisa langsung terbit setelah kendaraan disurvei dan dokumen telah dinyatakan lengkap. Masa berlaku SPK, yaitu 30 hari. Kemudian bawa mobilmu ke bengkel yang telah ditunjuk dengan membawa SPK yang telah tersedia. Serahkan proses perbaikan ke bengkel, dan kamu hanya perlu menunggu hingga proses perbaikan selesai, dan jangan lupa untuk bayar OR yang telah ditentukan tersebut.", "metadata": {"title": "Knowledgebase - 1000"}}]
+2023-10-24 17:21:49.150 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:21:49.160 SE Asia Standard Time | A: Untuk melakukan perhitungan premi, Anda perlu mengisi beberapa parameter berikut:
+
+1. Tipe Kendaraan (TRUCK, MINIBUS, SEDAN, BUS): Pilih tipe kendaraan yang sesuai dengan kendaraan Anda.
+2. Tahun Kendaraan: Masukkan tahun pembuatan kendaraan Anda.
+3. Plat No: Masukkan nomor plat kendaraan Anda.
+4. Kode Post: Masukkan kode pos tempat Anda tinggal.
+5. Harga Kendaraan: Masukkan harga kendaraan Anda.
+
+Dengan mengisi parameter-parameter di atas, Anda dapat melakukan simulasi perhitungan premi kendaraan Anda.
+2023-10-24 17:21:49.164 SE Asia Standard Time | Tokens Used: 337
+	Prompt Tokens: 190
+	Completion Tokens: 147
+Successful Requests: 2
+Total Cost (USD): $0.000579
+2023-10-24 17:21:49.166 SE Asia Standard Time | D: [{"page_content": "informasi berikut adalah bagimana melakukan perhitungan premi.\nuntuk melakukan simulasi perhitungan premi diperlukan beberapa parameter yang harus di isi yaitu :\n1. Tipe Kendaraan (TRUCK,MINIBUS,SEDAN,BUS)\n2. Tahun Kendaraan\n3. Plat No\n4. Kode Post\n5. Harga Kendaraan\n\njika info tidak berkaitan dengan di atas harap di jawab dengan noinfo", "metadata": {"title": "Hitung Premi - 1000"}}]
+2023-10-24 17:21:56.440 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:21:56.440 SE Asia Standard Time | A: Untuk menghitung premi asuransi mobil, Anda perlu memberikan informasi berikut:
+1. Harga mobil
+2. Jenis asuransinya (Comprehensive atau Total Loss Only)
+3. Merk atau brand mobil
+4. Tahun pembuatan mobil
+5. Plat Mobil
+
+Dengan informasi tersebut, Anda dapat menghubungi perusahaan asuransi atau menggunakan kalkulator premi online yang disediakan oleh perusahaan asuransi untuk mendapatkan estimasi premi yang harus dibayarkan.
+2023-10-24 17:21:56.440 SE Asia Standard Time | Tokens Used: 1044
+	Prompt Tokens: 931
+	Completion Tokens: 113
+Successful Requests: 1
+Total Cost (USD): $0.0016225000000000002
+2023-10-24 17:21:56.450 SE Asia Standard Time | D: [{"page_content": "Membeli asuransi mobil bisa lebih cepat dan mudah. Calon pembeli polis tidak perlu repot datang ke kantor Asuransi tapi bisa melalui website atau chatbot. Caranya: gunakan gadget /notebook untuk membuka situs perusahaan asuransi kami atau chat tulis beli asuransi dan lengkapi data pribadi serta data produk yang akan dipilih. Kemudian tunggu waktu 1x24 jam, dan setelahnya tim marketing Asuransi akan langsung menghubungi calon pembeli polis.\n\nSebelum membeli asuransi mobil, calon pembeli polis juga dapat mengetahui perhitungan premi secara cepat. Calon pembeli polis akan diminta untuk memberikan informasi yang terdiri dari\n1. Harga mobil\n2. Jenis asuransinya\n3. Merk atau brand mobil\n4. Tahun pembuatan mobil\n5. Plat Mobil", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "Beberapa hal yang harus dilakukan untuk mengajukan klaim asuransi adalah lapor, isi formulir kejadian, survei, SPK Terbit lalu terakhir bawa mobil anda ke bengkel. Laporkan kejadian maksimal 5 x 24 jam baik secara lisan atau tertulis. Laporan bisa kamu sampaikan dengan cara datang ke kantor asuransi terdekat atau melalui Hotline chat 24 jam. Selanjutnya isi formulir kejadian. Formulir kejadian berisi penjelasan dan kronologi atas kejadian yang kamu alami dan akan menjadi bahan acuan bagi surveyor kami dalam melakukan pengecekan. Pastikan laporan yang kamu sampaikan sesuai dengan fakta yang terjadi di lapangan ya. Selanjutnya Survei akan dilakukan sebagai bentuk konfirmasi laporan yang sudah kamu sampaikan, sehingga muncul kesesuaian kejadian.  Saat survei ini juga ditentukan besaran OR (Own Risk) yang harus kamu bayarkan saat perbaikan dilakukan di bengkel. Setelah survey maka SPK akan terbit. SPK yang kamu tunggu sebagai bekal untuk melakukan perbaikan mobil, bisa langsung terbit", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "Ada 2 macam jaminan dalam asuransi kendaraan bermotor yaitu jaminan utama dan jaminan perluasan.\n\nAda dua pilihan jaminan utama dalam asuransi kendaraan bermotor, meliputi Comprehensive dan Total Loss Only (TLO). Resiko yang dijamin pada penutupan Comprehensive, yaitu kerusakan yang diakibatkan oleh adanya benturan, tabrakan, terbalik, tergelincir, perbuatan jahat, pencurian, dan kebakaran, baik untuk kerugian sebagian maupun kerugian total, selama tidak disebabkan oleh pengecualian pada polis. Risiko yang dijamin pada penutupan Total Loss Only (TLO), yaitu kerusakan atau kerugin karena suatu peristiwa yang biaya perbaikan, penggantian atau pemulihan ke keadaan semula sesaat sebelum terjadinya kerusakan atau kerugian \u2265 75% dari harga sebenarnya. TLO juga menjamin kerugian apabila kendaraan hilang atau dicuri.", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "terbit. SPK yang kamu tunggu sebagai bekal untuk melakukan perbaikan mobil, bisa langsung terbit setelah kendaraan disurvei dan dokumen telah dinyatakan lengkap. Masa berlaku SPK, yaitu 30 hari. Kemudian bawa mobilmu ke bengkel yang telah ditunjuk dengan membawa SPK yang telah tersedia. Serahkan proses perbaikan ke bengkel, dan kamu hanya perlu menunggu hingga proses perbaikan selesai, dan jangan lupa untuk bayar OR yang telah ditentukan tersebut.", "metadata": {"title": "Knowledgebase - 1000"}}]
+2023-10-24 17:25:46.752 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:25:46.752 SE Asia Standard Time | A: Maaf, informasi yang Anda berikan tidak berkaitan dengan perhitungan premi kendaraan. Apakah ada pertanyaan lain yang dapat saya bantu?
+2023-10-24 17:25:46.752 SE Asia Standard Time | Tokens Used: 233
+	Prompt Tokens: 194
+	Completion Tokens: 39
+Successful Requests: 2
+Total Cost (USD): $0.000369
+2023-10-24 17:25:46.752 SE Asia Standard Time | D: [{"page_content": "informasi berikut adalah bagimana melakukan perhitungan premi.\nuntuk melakukan simulasi perhitungan premi diperlukan beberapa parameter yang harus di isi yaitu :\n1. Tipe Kendaraan (TRUCK,MINIBUS,SEDAN,BUS)\n2. Tahun Kendaraan\n3. Plat No\n4. Kode Post\n5. Harga Kendaraan\n\njika info tidak berkaitan dengan di atas harap di jawab dengan noinfo", "metadata": {"title": "Hitung Premi - 1000"}}]
+2023-10-24 17:25:53.176 SE Asia Standard Time | Q: hitung premi
+2023-10-24 17:25:53.176 SE Asia Standard Time | A: Untuk menghitung premi asuransi mobil, Anda perlu memberikan informasi berikut:
+1. Harga mobil
+2. Jenis asuransinya (Comprehensive atau Total Loss Only)
+3. Merk atau brand mobil
+4. Tahun pembuatan mobil
+5. Plat Mobil
+
+Dengan informasi tersebut, Anda dapat menghubungi perusahaan asuransi untuk meminta perhitungan premi yang sesuai dengan kondisi mobil Anda.
+2023-10-24 17:25:53.180 SE Asia Standard Time | Tokens Used: 1030
+	Prompt Tokens: 931
+	Completion Tokens: 99
+Successful Requests: 1
+Total Cost (USD): $0.0015945000000000002
+2023-10-24 17:25:53.186 SE Asia Standard Time | D: [{"page_content": "Membeli asuransi mobil bisa lebih cepat dan mudah. Calon pembeli polis tidak perlu repot datang ke kantor Asuransi tapi bisa melalui website atau chatbot. Caranya: gunakan gadget /notebook untuk membuka situs perusahaan asuransi kami atau chat tulis beli asuransi dan lengkapi data pribadi serta data produk yang akan dipilih. Kemudian tunggu waktu 1x24 jam, dan setelahnya tim marketing Asuransi akan langsung menghubungi calon pembeli polis.\n\nSebelum membeli asuransi mobil, calon pembeli polis juga dapat mengetahui perhitungan premi secara cepat. Calon pembeli polis akan diminta untuk memberikan informasi yang terdiri dari\n1. Harga mobil\n2. Jenis asuransinya\n3. Merk atau brand mobil\n4. Tahun pembuatan mobil\n5. Plat Mobil", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "Beberapa hal yang harus dilakukan untuk mengajukan klaim asuransi adalah lapor, isi formulir kejadian, survei, SPK Terbit lalu terakhir bawa mobil anda ke bengkel. Laporkan kejadian maksimal 5 x 24 jam baik secara lisan atau tertulis. Laporan bisa kamu sampaikan dengan cara datang ke kantor asuransi terdekat atau melalui Hotline chat 24 jam. Selanjutnya isi formulir kejadian. Formulir kejadian berisi penjelasan dan kronologi atas kejadian yang kamu alami dan akan menjadi bahan acuan bagi surveyor kami dalam melakukan pengecekan. Pastikan laporan yang kamu sampaikan sesuai dengan fakta yang terjadi di lapangan ya. Selanjutnya Survei akan dilakukan sebagai bentuk konfirmasi laporan yang sudah kamu sampaikan, sehingga muncul kesesuaian kejadian.  Saat survei ini juga ditentukan besaran OR (Own Risk) yang harus kamu bayarkan saat perbaikan dilakukan di bengkel. Setelah survey maka SPK akan terbit. SPK yang kamu tunggu sebagai bekal untuk melakukan perbaikan mobil, bisa langsung terbit", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "Ada 2 macam jaminan dalam asuransi kendaraan bermotor yaitu jaminan utama dan jaminan perluasan.\n\nAda dua pilihan jaminan utama dalam asuransi kendaraan bermotor, meliputi Comprehensive dan Total Loss Only (TLO). Resiko yang dijamin pada penutupan Comprehensive, yaitu kerusakan yang diakibatkan oleh adanya benturan, tabrakan, terbalik, tergelincir, perbuatan jahat, pencurian, dan kebakaran, baik untuk kerugian sebagian maupun kerugian total, selama tidak disebabkan oleh pengecualian pada polis. Risiko yang dijamin pada penutupan Total Loss Only (TLO), yaitu kerusakan atau kerugin karena suatu peristiwa yang biaya perbaikan, penggantian atau pemulihan ke keadaan semula sesaat sebelum terjadinya kerusakan atau kerugian \u2265 75% dari harga sebenarnya. TLO juga menjamin kerugian apabila kendaraan hilang atau dicuri.", "metadata": {"title": "Knowledgebase - 1000"}}, {"page_content": "terbit. SPK yang kamu tunggu sebagai bekal untuk melakukan perbaikan mobil, bisa langsung terbit setelah kendaraan disurvei dan dokumen telah dinyatakan lengkap. Masa berlaku SPK, yaitu 30 hari. Kemudian bawa mobilmu ke bengkel yang telah ditunjuk dengan membawa SPK yang telah tersedia. Serahkan proses perbaikan ke bengkel, dan kamu hanya perlu menunggu hingga proses perbaikan selesai, dan jangan lupa untuk bayar OR yang telah ditentukan tersebut.", "metadata": {"title": "Knowledgebase - 1000"}}]

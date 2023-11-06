@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Buddy {% endblock %}
+{% block content %}
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title fw-semibold mb-4">Knowledge Setup</h5>
+    <div class="card">
+      <div class="card-body">
+
+        <form id="_form" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          
+          <div class="mb-3">
+            <label for="chat_knowledge" class="form-label">Podcast</label>
+            <select id="chat_knowledge" name="chat_knowledge" class="form-select">
+              <option>Knowledgebase</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="recreate" class="form-label">Recreate vector collection</label>
+            <select id="recreate" name="recreate" class="form-select">
+              <option value=true>Yes</option>
+              <option value=false>No</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="chunk_size" class="form-label">Chunk size</label>
+            <select id="chunk_size" name="chunk_size" class="form-select">
+              <option value=1000>1000 Characters</option>
+              <option value=750>750 Characters</option>
+              <option value=500>500 Characters</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="filetxt" class="form-label">Knowledge file (.txt)</label>
+            <input class="form-control" type="file" id="filetxt" name="filetxt" accept=".txt">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+          <div class="mb-3">
+            <center><p style="color:green;">{{ msg }}</p></center>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+  $(document).ready(function () {
+   
+
+    $("#_form").submit(function (event) {
+      var form = $('#_form')[0]; // You need to use standard javascript object here
+      var formData = new FormData(form);
+      console.log(formData)
+      
+      $.ajax({
+        url: '/knowledge_setup/',
+        data: formData,
+        type: 'POST',
+        processData: false,
+        contentType: false,
+        beforeSend: function () {
+          $.LoadingOverlay("show");
+
+        },
+        success: function (result) {
+          $.LoadingOverlay("hide");
+        
+          if (result.status == true) {
+            Swal.fire(
+              'Good job!',
+              result.message,
+              'success'
+            );
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: result.message,
+            });
+          }
+        },
+        error: function (e) {
+          $.LoadingOverlay("hide");
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Upload error / time out',
+          });
+        }
+    });
+  
+      event.preventDefault();
+    });
+  });
+  
+
+</script>
+{% endblock %}

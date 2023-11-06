@@ -1,0 +1,8 @@
+untuk melakukan simulasi perhitungan premi diperlukan beberapa parameter yang harus di isi yaitu :
+1. Tipe Kendaraan (TRUCK,MINIBUS,SEDAN,BUS)
+2. Tahun Kendaraan
+3. Plat No
+4. Kode Post
+5. Harga Kendaraan
+
+

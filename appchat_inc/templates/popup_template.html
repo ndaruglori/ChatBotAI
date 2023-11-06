@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+    <button id="showPopup">Show Popup</button>
+
+    <script>
+        document.getElementById('showPopup').addEventListener('click', function () {
+            Swal.fire({
+                title: 'My SweetAlert Popup',
+                text: 'This is the content of the popup.',
+                icon: 'info',
+            });
+        });
+    </script>
+</body>
+</html>

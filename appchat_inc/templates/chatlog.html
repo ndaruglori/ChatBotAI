@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Buddy {% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-12 d-flex align-items-strech">
+        <div class="card w-100">
+          <div class="card-body" style="height : 100%; position: relative;">
+            <table class="" id="_table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Date (UTC)</th>
+                        <th>User</th>
+                        <th>Location</th>
+                        <th>Token & Cost</th>
+                        <th>Chat</th>
+                        <th>Chunks</th>
+                    </tr>
+                </thead>
+            </table>
+          </div>
+        </div>
+    </div>
+    
+  </div>
+
+
+
+  <!-- Button trigger modal -->
+    {% comment %} <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong" data-desc="aaa"
+    onclick="get_modal_data(this)">
+        Chunks
+    </button> {% endcomment %}
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Chunk used</h5>
+        </div>
+        <div class="modal-body" id="modal_body">
+            <pre id="modal_json"></pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block script %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+    function get_modal_data(div, id){
+        $.ajax({
+            url: '/getdesc_chatlog/?id='+id,
+            type: 'GET',
+            processData: false,
+            contentType: false,
+            beforeSend: function () {
+    
+            },
+            success: function (result) {
+            
+              if (result.status == true && isJSON(result.desc) == true) {
+                $('#modal_json').html(JSON.stringify(JSON.parse(result.desc), undefined, 2));
+              } else {
+                $('#modal_json').html('no data');
+              }
+            },
+            error: function (e) {
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Get chunk error',
+              });
+            }
+        });
+    }
+
+    function isJSON(str) {
+        try {
+            return (JSON.parse(str) && !!str);
+        } catch (e) {
+            return false;
+        }
+    }
+
+    $(document).ready(function () {
+        //$('#_table').DataTable();
+        var oTable = $('#_table').dataTable({
+            // ...
+            "processing": true,
+            "serverSide": true,
+            "columnDefs": [
+                { "width": "15%", "targets": 1 },
+                { "width": "15%", "targets": 2 },
+                { "width": "50%", "targets": 5 }
+            ],
+            order: [[0, 'desc']],
+            "ajax": "{% url 'getchatlog' %}"
+        });
+        // ...
+    });
+
+
+  
+
+</script>
+{% endblock %}
